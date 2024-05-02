@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/logo-64px.png" type="image/png" sizes="64x64">
+    <link rel="stylesheet" href="styles.css">
+    <title>Camara</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <span id="spinner"></span>
+    <header>
+        <h1>Minstagram</h1>
+    </header>
+    
+    <div id="container">
+        <img id="displayImage" src="" alt="Imagen capturada por el usuario">
+        <input type="text" id="imageTitle" placeholder="Título">
+        <div id="actionButtons">
+            <button id="cancelButton">Cancelar</button>
+            <button id="publishButton">Publicar</button>
+        </div>
+    </div>
+
+    <script src="camara.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

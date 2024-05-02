@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#container {
+    max-width: 400px;
+    margin: 20px auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 768px;
+    margin: auto;
+}
+
+.image-container, #displayImage {
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px #ccc;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.image-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+#displayImage {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+img {
+    width: 75%;
+    height: auto;
+    max-height: 500px;
+    display: block;
+    margin: auto;
+    padding: 1em;
+    object-fit: contain;
+}
+
+.image-title, #imageTitle {
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    color: #333;
+    width: calc(100% - 20px);
+}
+
+#imageTitle {
+    border: 1px solid #ccc;
+}
+
+.image-date {
+    font-size: 12px;
+    padding: 0 10px 10px 10px;
+    color: #666;
+}
+
+#actionButtons {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#actionButtons button, #cameraButton {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cancelButton {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(244, 67, 54, 1);
+    background-color: rgba(244, 67, 54, .6);
+    color: white;
+}
+
+#publishButton, #cameraButton {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(76, 175, 80, 1);
+    background-color: rgba(76, 175, 80, .75);
+    color: white;
+}
+
+.camera-button-container {
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#cameraButton {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: #5851DB;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cameraButton:hover {
+    background-color: #4842B7;
+}
+
+
+/* Spinner */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    z-index: 1003;
+}
+
+#spinner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #4842B7;
+    animation: spin 1s ease-in-out infinite;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 1004;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.no-image {
+    font-size: 24px;
+    line-height: 100px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #spinner {
+        top: 40%;
+        left: 40%;
+    }
+}
+
